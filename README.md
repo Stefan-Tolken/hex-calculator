@@ -26,7 +26,7 @@ This project uses the following technologies:
 - Used for deploying the final application in a scalable cloud environment.
 - AWS Lambda may be used for a serverless backend.
 
-## 📜 Prerequisites
+## Prerequisites
 Since this is an **intermediate-level** project, it assumes prior knowledge of:
 - **Basic JavaScript & React** – Understanding of ES6+ syntax and React components.
 - **Node.js & Express** – Ability to create simple API endpoints.
@@ -34,7 +34,7 @@ Since this is an **intermediate-level** project, it assumes prior knowledge of:
 - **Docker Basics** – Running and managing Docker containers.
 - **Basic AWS Knowledge** – Deploying applications using AWS services.
 
-## 🎯 Project Features
+## Project Features
 - **Hexadecimal Arithmetic**: Supports addition, subtraction, multiplication, and division.
 - **Input Validation**: Accepts only valid hex numbers (0-9, A-F), enforces digit constraints.
 - **No Decimals or Negatives**: Results are always non-negative and rounded.
@@ -42,7 +42,7 @@ Since this is an **intermediate-level** project, it assumes prior knowledge of:
 - **Dockerized Deployment**: Packaged for easy deployment using containers.
 - **AWS Cloud Hosting**: Deployed on AWS for scalability and reliability.
 
-## 📂 Project Setup
+## Project Setup
 1. **Clone the repository**
    ```sh
    git clone https://github.com/your-username/hex-calculator.git
