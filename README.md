@@ -3,6 +3,9 @@
 ## Introduction
 Welcome to the **Hexadecimal Calculator** project! This is an **intermediate-level** web development project designed to demonstrate **Test-Driven Development (TDD)** principles while integrating modern web technologies. The calculator performs basic arithmetic operations (**addition, subtraction, multiplication, and division**) on **hexadecimal numbers** while enforcing specific constraints.
 
+## Video Tutorials
+[Section 1](https://drive.google.com/drive/folders/1C32EcgPppFXToJOTzdpxaVXCD6bJBE0_?usp=sharing)
+
 ## Tech Stack & Purpose
 This project uses the following technologies:
 
