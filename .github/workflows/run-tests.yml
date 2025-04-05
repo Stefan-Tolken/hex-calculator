@@ -1,0 +1,26 @@
+name: Run Hex Calculator Tests
+
+on:
+  push:
+    branches: [ main, section-2, section-2-github-actions]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies and run tests
+        working-directory: ./hex-calculator
+        run: |
+          npm ci
+          npm test
