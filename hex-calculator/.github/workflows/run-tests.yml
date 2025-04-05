@@ -2,7 +2,7 @@ name: Run Hex Calculator Tests
 
 on:
   push:
-    branches: [ main, section-2/** ]
+    branches: [ main, section-2, section-2-github-actions]
   pull_request:
     branches: [ main ]
 
