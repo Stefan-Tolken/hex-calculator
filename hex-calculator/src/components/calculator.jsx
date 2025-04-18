@@ -46,7 +46,7 @@ export default function Calculator() {
   };
 
   return (
-    <div className="space-y-4 p-4 rounded-lg border shadow-sm w-full max-w-md mx-auto">
+    <div className="space-y-4 p-6 rounded-2xl bg-background shadow-[8px_8px_16px_#d1d9e6,_-8px_-8px_16px_#ffffff] max-w-md w-full mx-auto">
       <HexInput ref={inputRef} value={input} onChange={setInput} />
       <HexKeys onClick={handleInsert} />
       <Operators onClick={handleInsert} />
