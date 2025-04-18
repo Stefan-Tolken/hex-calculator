@@ -42,14 +42,13 @@ describe('Hex Calculator - Basic UI Tests', () => {
     cy.get('input').should('have.value', '');
   });
 
-  it('equals button does nothing yet (expected to be same as input)', () => {
+  it('equals button works', () => {
     cy.contains('button', 'F').click();
     cy.contains('button', '+').click();
     cy.contains('button', '1').click();
 
     cy.contains('button', '=').click();
 
-    // The value should stay the same (no calculation yet)
-    cy.get('input').should('have.value', 'F+1');
+    cy.get('input').should('have.value', '10');
   });
 });
