@@ -2,18 +2,18 @@ import { mul } from '../lib/hex';
 
 describe('Hex Calculator - Multiply', () => {
   it('should correctly multiply two 2-digit hex values', () => {
-    expect(mul('0A', '02')).toBe('14');     // 0x0A * 0x02 = 0x14
-    expect(mul('10', '10')).toBe('100');    // 0x10 * 0x10 = 0x100
+    expect(mul('0A', '02')).toBe('14');
+    expect(mul('10', '10')).toBe('100');
   });
 
   it('should cap results at 4-digit hex max', () => {
-    expect(mul('FF', 'FF')).toBe('FE01');   // 0xFF * 0xFF = 0xFE01
-    expect(mul('FF', '100')).toBe('0');     // Invalid input (too long)
+    expect(mul('FF', 'FF')).toBe('FE01');
+    expect(mul('FF', '100')).toBe('Input values must not exceed 2 hex digits');
   });
 
-  it('should return 0 for invalid inputs or too long', () => {
-    expect(mul('1G', '02')).toBe('0');
-    expect(mul('AAAA', '02')).toBe('0');
+  it('should return an error for invalid inputs or too long', () => {
+    expect(mul('1G', '02')).toBe('Inputs must be valid hexadecimal numbers (00 to FF)');
+    expect(mul('AAAA', '02')).toBe('Input values must not exceed 2 hex digits');
   });
 
   it('should accept lowercase hex inputs', () => {
