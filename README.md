@@ -5,7 +5,10 @@ Welcome to the **Hexadecimal Calculator** project! This is an **intermediate-lev
 
 ## Video Tutorials
 [Section 1](https://drive.google.com/drive/folders/1C32EcgPppFXToJOTzdpxaVXCD6bJBE0_?usp=sharing)
+
 [Section 2](https://drive.google.com/drive/folders/15fADwAkGbfougGiglFRqlO8YAdM0nDjV?usp=sharing)
+
+[Section 3](https://drive.google.com/drive/folders/1bVkqqTwbaWvfZ1x4ily8YyWeNmjxudxK?usp=sharing)
 
 ## Tech Stack & Purpose
 This project uses the following technologies:
