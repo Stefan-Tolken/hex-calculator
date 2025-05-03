@@ -1,27 +1,23 @@
-# Install dependencies only when needed
-FROM node:18-alpine AS deps
-WORKDIR /app
-COPY package.json package-lock.json ./
-RUN npm ci
+# Use a stable Node.js version
+FROM node:20
 
-# Rebuild the source code only when needed
-FROM node:18-alpine AS builder
+# Set the working directory inside the container
 WORKDIR /app
-COPY --from=deps /app/node_modules ./node_modules
+
+# Copy dependency definitions
+COPY package*.json ./
+
+# Install dependencies
+RUN npm install
+
+# Copy all project files to the container
 COPY . .
+
+# Build the Next.js app
 RUN npm run build
 
-# Production image
-FROM node:18-alpine AS runner
-WORKDIR /app
-
-ENV NODE_ENV production
-
-COPY --from=builder /app/public ./public
-COPY --from=builder /app/.next ./.next
-COPY --from=builder /app/node_modules ./node_modules
-COPY --from=builder /app/package.json ./package.json
-
+# Expose port 3000 (Next.js default)
 EXPOSE 3000
 
+# Start the app
 CMD ["npm", "start"]
