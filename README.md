@@ -10,6 +10,8 @@ Welcome to the **Hexadecimal Calculator** project! This is an **intermediate-lev
 
 [Section 3](https://drive.google.com/drive/folders/1bVkqqTwbaWvfZ1x4ily8YyWeNmjxudxK?usp=sharing)
 
+[Section 4](https://drive.google.com/drive/folders/1HxRRUJGUc2rKH8AVsolzMyuE53dBG6Nx?usp=sharing)
+
 ## Tech Stack & Purpose
 This project uses the following technologies:
 
