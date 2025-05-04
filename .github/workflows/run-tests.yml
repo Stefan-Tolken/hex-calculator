@@ -2,12 +2,12 @@ name: Run Hex Calculator Tests
 
 on:
   push:
-    branches: [ main, section-2, section-2-github-actions]
+    branches: [ main, section-2, section-3, section-3-github-actions ]
   pull_request:
     branches: [ main ]
 
 jobs:
-  test:
+  unit-tests:
     runs-on: ubuntu-latest
 
     steps:
@@ -19,8 +19,37 @@ jobs:
         with:
           node-version: 20
 
-      - name: Install dependencies and run tests
+      - name: Install dependencies and run unit tests
         working-directory: ./hex-calculator
         run: |
           npm ci
           npm test
+
+  e2e-tests:
+    runs-on: ubuntu-latest
+    needs: unit-tests
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        working-directory: ./hex-calculator
+        run: npm ci
+
+      - name: Build Next.js app
+        working-directory: ./hex-calculator
+        run: npm run build
+
+      - name: Run Cypress tests
+        uses: cypress-io/github-action@v6
+        with:
+          working-directory: ./hex-calculator
+          start: npm start
+          wait-on: 'http://localhost:3000'
+          wait-on-timeout: 60

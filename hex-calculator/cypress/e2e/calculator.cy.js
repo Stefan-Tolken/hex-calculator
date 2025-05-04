@@ -41,4 +41,14 @@ describe('Hex Calculator - Basic UI Tests', () => {
     cy.contains('button', 'Clear').click();
     cy.get('input').should('have.value', '');
   });
+
+  it('equals button works', () => {
+    cy.contains('button', 'F').click();
+    cy.contains('button', '+').click();
+    cy.contains('button', '1').click();
+
+    cy.contains('button', '=').click();
+
+    cy.get('input').should('have.value', '10');
+  });
 });

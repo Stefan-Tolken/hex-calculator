@@ -5,7 +5,12 @@ Welcome to the **Hexadecimal Calculator** project! This is an **intermediate-lev
 
 ## Video Tutorials
 [Section 1](https://drive.google.com/drive/folders/1C32EcgPppFXToJOTzdpxaVXCD6bJBE0_?usp=sharing)
+
 [Section 2](https://drive.google.com/drive/folders/15fADwAkGbfougGiglFRqlO8YAdM0nDjV?usp=sharing)
+
+[Section 3](https://drive.google.com/drive/folders/1bVkqqTwbaWvfZ1x4ily8YyWeNmjxudxK?usp=sharing)
+
+[Section 4](https://drive.google.com/drive/folders/1HxRRUJGUc2rKH8AVsolzMyuE53dBG6Nx?usp=sharing)
 
 ## Tech Stack & Purpose
 This project uses the following technologies:
@@ -45,32 +50,3 @@ Since this is an **intermediate-level** project, it assumes prior knowledge of:
 - **GitHub Actions**: Automated testing workflow for continuous integration.
 - **Dockerized Deployment**: Packaged for easy deployment using containers.
 - **AWS Cloud Hosting**: Deployed on AWS for scalability and reliability.
-
-## Project Setup
-1. **Clone the repository**
-   ```sh
-   git clone https://github.com/your-username/hex-calculator.git
-   cd hex-calculator
-   ```
-
-2. **Install dependencies**
-   ```sh
-   npm install
-   ```
-
-3. **Run the development server**
-   ```sh
-   npm run dev
-   ```
-
-4. **Run tests**
-   ```sh
-   npm test
-   ```
-
-5. **Build and run with Docker**
-   ```sh
-   docker build -t hex-calculator .
-   docker run -p 3000:3000 hex-calculator
-   ```
-
